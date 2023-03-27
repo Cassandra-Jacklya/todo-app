@@ -1,0 +1,281 @@
+@import url(https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap);
+@import 'variables';
+@import 'mixins';
+
+body {
+    font-family: Arial,sans-serif;
+    font-family: Sarala,sans-serif;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+h2 {
+    margin: 0;
+}
+
+label {
+    display: block;
+    font-size: $text;
+    margin-bottom: 8px;
+}
+
+#search-list {
+    height: 140px;
+    list-style: none;
+    margin: 10px 0;
+    overflow: auto;
+    padding: 0;
+
+    li {
+        @include dis-align-just(flex, center, flex-start);
+        border-bottom: 1px solid $border-color;
+        flex: 1;
+        margin-bottom: 10px;
+        padding: 4px 0;
+        position: relative;
+
+        &.no-result {
+            font-size: 12px;
+            height: 100px;
+            justify-content: center;
+        }
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.bg-wrapper {
+    @include blocks($bg-special, 0, auto, 100vh, 80px 120px);
+}
+
+.left-block {
+    @include blocks($bg-primary, 8px, 320px, 100%, $padding-common);
+    overflow: auto;
+}
+
+.mid-block {
+    padding: $padding-common;
+    width: calc(100% - 760px);
+}
+
+.right-block {
+    @include blocks($bg-primary, 8px, 440px, 100%, $padding-common);
+}
+
+.app {
+    @include blocks(#fff, 16px, auto, calc(100vh - 160px), $padding-common);
+    box-shadow: -1px 1px 106px -1px hsla(0,6%,50%,.63);
+}
+
+.left-title {
+    @include dis-align-just(flex, center, space-between);
+    color: $text-primary;
+    font-size: $title;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#todo-list {
+
+    height: calc(100vh - 392px);
+    list-style: none;
+    overflow: auto;
+    padding: 0;
+
+    li {
+        &.no-todo {
+            @include dis-align-just(flex, center, center);
+            border-radius: 4px;
+            font-size: 12px;
+            height: 100px;
+        }
+    }
+}
+
+#search-form {
+    flex: 1;
+    display: flex;
+    padding: $padding-common 0;
+}
+
+.fa-magnifying-glass{
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.task-list {
+
+    list-style: none;
+    margin: 8px;
+    padding: 0;
+
+    li {
+        font-size: $text;
+        padding: 4px 0;
+
+        span {
+            display: inline-block;
+            margin-right: 8px;
+            text-align: center;
+            width: 20px;
+        }
+    }
+}
+
+#todo-form {
+    margin-bottom: 20px;
+    display: flex;
+    padding: $padding-common 0;
+}
+
+.input {
+    outline: none;
+
+    &-field, &-text-area {
+        @include blocks($bg-primary, 8px, auto, auto, 10px);
+        border: 1px solid $border-color;
+        color: $text-primary;
+        flex: 1;
+        font-size: $text;
+        font-weight: 700;
+    }
+
+    &-field-todo {
+        background-color: #fff;
+        font-size: $sub-title;
+        padding: 16px;
+    }
+}
+
+.w100 {
+    width: 100%;
+}
+
+.mt16 {
+    margin-top: 16px;
+}
+
+.date-desc {
+    font-size: $misc;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
+
+.border-all {
+    margin-right: 8px;
+}
+
+.date-field {
+    display: flex;
+
+    .input-field {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.task-title {
+    color: $text-primary;
+    font-size: $text;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#result-count {
+    @include dis-align-just(flex, center, flex-end);
+    color: #136917;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.text-todo {
+    flex: 1;
+    padding-left: 8px;
+
+    p {
+        margin: 0;
+    }
+}
+
+.item-todo {
+    @include dis-align-just(flex, center, flex-start);
+    flex: 1;
+    padding: 10px;
+    border-bottom: 1px solid $border-color;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $bg-selected;
+    }
+}
+
+.tick-checkbox {
+    height: 16px;
+    margin-top: 5px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.fa-trash {
+    cursor: pointer;
+}
+
+#delete-todo {
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+}
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    color: $text-primary;
+    font-size: $text;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-primary {
+        background: $btn-primary;
+    }
+
+    &-secondary {
+        background: $btn-secondary;
+    }
+}
+
+li {
+    &:first-child {
+        .item-todo {
+            border-top: 1px solid $border-color;
+        }
+    }
+}
+
+.pg16 {
+    padding: $padding-common 0;
+}
+
+.mr8 {
+    margin-right: 8px;
+}

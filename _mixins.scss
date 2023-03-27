@@ -1,0 +1,13 @@
+@mixin blocks($bg-color, $border-rad, $width, $height, $padding) {
+    background-color: $bg-color;
+    border-radius: $border-rad;
+    width: $width;
+    height: $height;
+    padding: $padding;
+}
+
+@mixin dis-align-just($display, $align, $justify) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+}

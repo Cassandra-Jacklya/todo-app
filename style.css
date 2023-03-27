@@ -1,0 +1,289 @@
+@import url(https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap);
+body {
+  font-family: Arial, sans-serif;
+  font-family: Sarala, sans-serif;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+h2 {
+  margin: 0;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#search-list {
+  height: 140px;
+  list-style: none;
+  margin: 10px 0;
+  overflow: auto;
+  padding: 0;
+}
+#search-list li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #d0d0d0;
+  flex: 1;
+  margin-bottom: 10px;
+  padding: 4px 0;
+  position: relative;
+}
+#search-list li.no-result {
+  font-size: 12px;
+  height: 100px;
+  justify-content: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.bg-wrapper {
+  background-color: #bccbb7;
+  border-radius: 0;
+  width: auto;
+  height: 100vh;
+  padding: 80px 120px;
+}
+
+.left-block {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  width: 320px;
+  height: 100%;
+  padding: 16px;
+  overflow: auto;
+}
+
+.mid-block {
+  padding: 16px;
+  width: calc(100% - 760px);
+}
+
+.right-block {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  width: 440px;
+  height: 100%;
+  padding: 16px;
+}
+
+.app {
+  background-color: #fff;
+  border-radius: 16px;
+  width: auto;
+  height: calc(100vh - 160px);
+  padding: 16px;
+  box-shadow: -1px 1px 106px -1px hsla(0, 6%, 50%, 0.63);
+}
+
+.left-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #212529;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#todo-list {
+  height: calc(100vh - 392px);
+  list-style: none;
+  overflow: auto;
+  padding: 0;
+}
+#todo-list li.no-todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 12px;
+  height: 100px;
+}
+
+#search-form {
+  flex: 1;
+  display: flex;
+  padding: 16px 0;
+}
+
+.fa-magnifying-glass {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.task-list {
+  list-style: none;
+  margin: 8px;
+  padding: 0;
+}
+.task-list li {
+  font-size: 14px;
+  padding: 4px 0;
+}
+.task-list li span {
+  display: inline-block;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+
+#todo-form {
+  margin-bottom: 20px;
+  display: flex;
+  padding: 16px 0;
+}
+
+.input {
+  outline: none;
+}
+.input-field, .input-text-area {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #d0d0d0;
+  color: #212529;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 700;
+}
+.input-field-todo {
+  background-color: #fff;
+  font-size: 16px;
+  padding: 16px;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.mt16 {
+  margin-top: 16px;
+}
+
+.date-desc {
+  font-size: 10px;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.border-all {
+  margin-right: 8px;
+}
+
+.date-field {
+  display: flex;
+}
+.date-field .input-field {
+  background-color: transparent;
+  border: none;
+}
+
+.task-title {
+  color: #212529;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#result-count {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #136917;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.text-todo {
+  flex: 1;
+  padding-left: 8px;
+}
+.text-todo p {
+  margin: 0;
+}
+
+.item-todo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  padding: 10px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.item-todo:hover {
+  cursor: pointer;
+  background-color: #ebebeb;
+}
+
+.tick-checkbox {
+  height: 16px;
+  margin-top: 5px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.fa-trash {
+  cursor: pointer;
+}
+
+#delete-todo {
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  color: #212529;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn-primary {
+  background: #fdd43a;
+}
+.btn-secondary {
+  background: #e2dfd7;
+}
+
+li:first-child .item-todo {
+  border-top: 1px solid #d0d0d0;
+}
+
+.pg16 {
+  padding: 16px 0;
+}
+
+.mr8 {
+  margin-right: 8px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -34,6 +34,7 @@ searchForm.addEventListener('submit', function(event) {
                 <i>No results found!</i>
             </li>
         `;
+        resultCount.innerHTML = '';
         return
     }
 
@@ -58,7 +59,6 @@ todoForm.addEventListener('submit', function(event) {
 
     if(todoText) {
         todos.push(todo_item);
-        result.push(todo_item);
         outputList();
         todoInput.value='';
     }
@@ -172,5 +172,3 @@ const onSelect = (todo) => {
     });
     editTodo.appendChild(el);   
 }
-
-//<i class="fa-sharp fa-regular fa-circle-chevron-down"></i>

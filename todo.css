@@ -132,10 +132,6 @@ label {
     justify-content: center;
 }
 
-#search-form {
-    flex: 1;
-}
-
 .fa-magnifying-glass{
     border-radius: 8px;
     padding: 10px;
